@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Coding Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .project-card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <header class="py-20 px-6 text-center bg-gradient-to-b from-gray-800 to-gray-900">
+    <h1 class="text-5xl font-extrabold mb-4 text-white">Hi, I'm <span class="text-blue-400">[Your Name]</span></h1>
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+      Full-stack developer focused on clean code and efficient build pipelines.
+      Check out my latest projects below.
+    </p>
+    <div class="flex justify-center gap-4">
+      <a href="[Your GitHub Link]"
+        class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-full font-medium transition">GitHub</a>
+      <a href="[Your LinkedIn Link]"
+        class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-full font-medium transition">LinkedIn</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="project-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
+        <div class="h-48 bg-gray-700 flex items-center justify-center text-gray-500">[Project Screenshot]</div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Project One</h3>
+          <p class="text-gray-400 text-sm mb-4">A high-performance app bundled with Webpack and optimized for speed.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">React</span>
+            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">Webpack</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <a href="[Link to GH Pages]" class="text-blue-400 hover:underline font-medium">Live Demo →</a>
+            <a href="[Link to Repo]" class="text-gray-400 hover:text-white text-sm">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
+        <div class="h-48 bg-gray-700 flex items-center justify-center text-gray-500">[Project Screenshot]</div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Project Two</h3>
+          <p class="text-gray-400 text-sm mb-4">Brief description of the problem you solved with this specific build.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">JavaScript</span>
+            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">API</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <a href="[Link to GH Pages]" class="text-blue-400 hover:underline font-medium">Live Demo →</a>
+            <a href="[Link to Repo]" class="text-gray-400 hover:text-white text-sm">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
+        <div class="h-48 bg-gray-700 flex items-center justify-center text-gray-500">[Project Screenshot]</div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Project Three</h3>
+          <p class="text-gray-400 text-sm mb-4">A showcase of complex state management and responsive design.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">Node.js</span>
+            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">Tailwind</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <a href="[Link to GH Pages]" class="text-blue-400 hover:underline font-medium">Live Demo →</a>
+            <a href="[Link to Repo]" class="text-gray-400 hover:text-white text-sm">View Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-800 text-gray-500 text-sm">
+    Link to repo for this </footer>
+
+</body>
+
+</html>
