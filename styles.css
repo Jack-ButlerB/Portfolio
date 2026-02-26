@@ -1,0 +1,243 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827;
+  color: #f3f4f6;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  padding: 80px 24px;
+  text-align: center;
+  background: linear-gradient(to bottom, #1f2937, #111827);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.header-accent {
+  color: #60a5fa;
+}
+
+.header-subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.header-links a {
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-github {
+  background-color: #374151;
+  color: #f3f4f6;
+}
+
+.btn-github:hover {
+  background-color: #4b5563;
+}
+
+.btn-linkedin {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-linkedin:hover {
+  background-color: #1d4ed8;
+}
+
+/* Main Content */
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project Card */
+.project-card {
+  background-color: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #374151;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.project-image {
+  height: 192px;
+  background-color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  width: 400px;
+  height: 200px;
+  /* border: 1px solid #ddd; */
+  overflow: hidden; /* Hides the overflow of the large iframe */
+  position: relative;
+}
+
+/* ensure screenshots fill their container without distortion */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* if an iframe is embedded instead of an image, allow it to be scaled (zoomed)
+   this is useful when showing a live demo inside the card and we want to
+   display more of the page by shrinking it. the container size stays the same
+   so overflow:hidden on .project-image clips the extra content. */
+/* .project-image iframe {
+  --zoom: 0.5; 
+
+  transform: scale(var(--zoom));
+  transform-origin: top left;
+  width: calc(100% / var(--zoom));
+  height: calc(100% / var(--zoom));
+  border: none;
+} */
+
+.thumbnail-container {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #ddd;
+  overflow: hidden; /* Hides the overflow of the large iframe */
+  position: relative;
+}
+
+/* 2. The Iframe: Rendered at a large "Desktop" resolution */
+.thumbnail-iframe {
+  width: 1200px; /* Virtual width */
+  height: 800px; /* Virtual height */
+  border: none;
+
+  /* 3. The Magic: Scale it down (300 / 1200 = 0.25) */
+  transform: scale(0.4);
+  transform-origin: 0 0; /* Ensures it scales from the top-left corner */
+}
+
+.project-content {
+  padding: 24px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  background-color: #111827;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #4b5563;
+  color: #f3f4f6;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-link-live {
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+.project-link-live:hover {
+  text-decoration: underline;
+}
+
+.project-link-code {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.project-link-code:hover {
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid #1f2937;
+  color: #6b7280;
+  font-size: 0.875rem;
+}

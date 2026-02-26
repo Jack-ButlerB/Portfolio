@@ -5,91 +5,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Coding Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .project-card:hover {
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body>
 
-  <header class="py-20 px-6 text-center bg-gradient-to-b from-gray-800 to-gray-900">
-    <h1 class="text-5xl font-extrabold mb-4 text-white">Hi, I'm <span class="text-blue-400">Jack Butler</span></h1>
-    <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+  <header>
+    <h1>Hi, I'm <span class="header-accent">Jack Butler</span></h1>
+    <p class="header-subtitle">
       Full-stack developer focused on clean code and efficient build pipelines.
       Check out my latest projects below.
     </p>
-    <div class="flex justify-center gap-4">
-      <a href="https://github.com/Jack-ButlerB"
-        class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-full font-medium transition" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/jackbutler-dev/"
-        class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-full font-medium transition" target="_blank">LinkedIn</a>
+    <div class="header-links">
+      <a href="https://github.com/Jack-ButlerB" class="btn-github" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/jackbutler-dev/" class="btn-linkedin" target="_blank">LinkedIn</a>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+  <main>
+    <h2>Featured Projects</h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="projects-grid">
 
-      <div class="project-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
-        <div class="h-48 bg-gray-700 flex items-center justify-center text-gray-500">[Project Screenshot]</div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Tic Tac Toe</h3>
-          <p class="text-gray-400 text-sm mb-4">A high-performance app bundled with Webpack and optimized for speed.</p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">React</span>
-            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">Webpack</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <a href="https://jack-butlerb.github.io/Tic_Tac_Toe/" class="text-blue-400 hover:underline font-medium"
-              target="_blank">Live Demo
-              →</a>
-            <a href="https://github.com/Jack-ButlerB/Tic_Tac_Toe" class="text-gray-400 hover:text-white text-sm"
-              target="_blank">View Code</a>
-          </div>
+      <div class="project-card">
+        <div class="thumbnail-container">
+          <!-- <img src="tic-tac-toe-project-screenshot.png" alt="Tic Tac Toe Project Screenshot"> -->
+          <iframe class="thumbnail-iframe" src="https://jack-butlerb.github.io/Tic_Tac_Toe/"></iframe>
         </div>
-      </div>
-
-      <div class="project-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
-        <div class="h-48 bg-gray-700 flex items-center justify-center text-gray-500">[Project Screenshot]</div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Top Trumps</h3>
-          <p class="text-gray-400 text-sm mb-4">Brief description of the problem you solved with this specific build.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">JavaScript</span>
-            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600">API</span>
+        <div class="project-content">
+          <h3 class="project-title">Tic Tac Toe</h3>
+          <p class="project-description">Interactive game built with vanilla JavaScript, featuring responsive gameplay,
+            smooth animations, and efficient game logic.</p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
           </div>
-          <div class="flex justify-between items-center">
-            <a href="https://jack-butlerb.github.io/Top_Trumps/" class="text-blue-400 hover:underline font-medium"
-              target="_blank">Live Demo
+          <div class="project-links">
+            <a href="https://jack-butlerb.github.io/Tic_Tac_Toe/" class="project-link-live" target="_blank">Live Demo
               →</a>
-            <a href="https://github.com/Jack-ButlerB/Top_Trumps" class="text-gray-400 hover:text-white text-sm"
-              target="_blank">View Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
-        <div class="h-48 bg-gray-700 flex items-center justify-center text-gray-500">[Project Screenshot]</div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">To-Do List App</h3>
-          <p class="text-gray-400 text-sm mb-4">A showcase of complex state management and responsive design.</p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600" target="_blank">Node.js</span>
-            <span class="text-xs bg-gray-900 px-2 py-1 rounded border border-gray-600" target="_blank">Tailwind</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <a href="https://jack-butlerb.github.io/todo-list/" class="text-blue-400 hover:underline font-medium"
-              target="_blank">Live
-              Demo →</a>
-            <a href="https://github.com/Jack-ButlerB/todo-list" class="text-gray-400 hover:text-white text-sm"
-              target="_blank">View
+            <a href="https://github.com/Jack-ButlerB/Tic_Tac_Toe" class="project-link-code" target="_blank">View
               Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="thumbnail-container">
+          <!-- <img src="tic-tac-toe-project-screenshot.png" alt="Tic Tac Toe Project Screenshot"> -->
+          <iframe class="thumbnail-iframe" src=https://jack-butlerb.github.io/Top_Trumps></iframe>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Top Trumps</h3>
+          <p class="project-description">Classic card game built with vanilla JavaScript, featuring real-time player
+            scoring, dynamic card rendering, and responsive gameplay.</p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">HTML5</span>
+          </div>
+          <div class="project-links">
+            <a href="https://jack-butlerb.github.io/Top_Trumps/" class="project-link-live" target="_blank">Live Demo
+              →</a>
+            <a href="https://github.com/Jack-ButlerB/Top_Trumps" class="project-link-code" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="thumbnail-container">
+          <iframe class="thumbnail-iframe" src="https://jack-butlerb.github.io/todo-list/"></iframe>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">To-Do List App</h3>
+          <p class="project-description">Full-featured task manager with Webpack bundling, persistent local storage, and
+            a responsive user interface for efficient task management.</p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Webpack</span>
+            <span class="project-tag">CSS3</span>
+          </div>
+          <div class="project-links">
+            <a href="https://jack-butlerb.github.io/todo-list/" class="project-link-live" target="_blank">Live Demo
+              →</a>
+            <a href="https://github.com/Jack-ButlerB/todo-list" class="project-link-code" target="_blank">View Code</a>
           </div>
         </div>
       </div>
@@ -97,11 +96,9 @@
     </div>
   </main>
 
-  <footer class="text-center py-10 border-t border-gray-800 text-gray-500 text-sm">
-    <a href="https://github.com/Jack-ButlerB/portfolio" class="hover:text-white" target="_blank">View Source Code for
-      this Portfolio</a>
+  <footer>
+    <a href="https://github.com/Jack-ButlerB/portfolio" target="_blank">View Source Code for this Portfolio</a>
   </footer>
 </body>
-<!-- class="text-blue-400 hover:underline font-medium"> -->
 
 </html>
